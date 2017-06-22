@@ -20,4 +20,8 @@ if [[ ! -f $1/config/nginx.conf.erb ]]; then
 else
 	echo '-----> nginx-buildpack: Custom config found in app/config.'
 fi
+
+details=$(./bin/nginx-$STACK -V)
+echo "----> nginx details"
+echo "$details"
 exit 0
