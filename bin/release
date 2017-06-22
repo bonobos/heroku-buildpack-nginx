@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-echo "--- {}"
+version=$(bin/nginx -V)
+echo "$version"
